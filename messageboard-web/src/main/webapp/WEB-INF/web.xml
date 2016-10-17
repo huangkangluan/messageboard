@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+         version="3.1">
+    <filter>
+        <filter-name>EncodeingFilter</filter-name>
+        <filter-class>com.hzit.web.filter.EncodeingFilter</filter-class>
+    </filter>
+    <servlet>
+        <servlet-name>MessageBoardServlet</servlet-name>
+        <servlet-class>com.hzit.web.servlet.MessageBoardServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ToaddmessageServlet</servlet-name>
+        <servlet-class>com.hzit.web.servlet.ToaddmessageServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>UsersServlet</servlet-name>
+        <servlet-class>com.hzit.web.servlet.UsersServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ConnectServlet</servlet-name>
+        <servlet-class>com.hzit.web.servlet.ConnectServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ConnectServlet</servlet-name>
+        <url-pattern>/do/page</url-pattern>
+    </servlet-mapping>
+    <filter-mapping>
+        <filter-name>EncodeingFilter</filter-name>
+        <url-pattern>/do/*</url-pattern>
+    </filter-mapping>
+    <servlet-mapping>
+        <servlet-name>MessageBoardServlet</servlet-name>
+        <url-pattern>/do/msg</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>UsersServlet</servlet-name>
+        <url-pattern>/user</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ToaddmessageServlet</servlet-name>
+        <url-pattern>/do/addmsg.php</url-pattern>
+    </servlet-mapping>
+</web-app>

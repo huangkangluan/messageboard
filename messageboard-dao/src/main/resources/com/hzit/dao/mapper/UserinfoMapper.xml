@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hzit.dao.mapper.UserinfoMapper">
+  <select id="find_userName_userPwd" resultType="com.hzit.dao.entity.Userinfo">
+    SELECT * FROM userinfo WHERE userName=#{name} AND usePwd=#{pwd}
+  </select>
+  <select id="findByid" parameterType="String">
+    SELECT * FROM userinfo WHERE userid=#{userid}
+  </select>
+</mapper>

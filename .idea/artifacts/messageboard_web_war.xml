@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="messageboard-web:war">
+    <output-path>$PROJECT_DIR$/messageboard-web/target</output-path>
+    <root id="archive" name="messageboard-web-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="messageboard-web:war exploded" />
+    </root>
+  </artifact>
+</component>
